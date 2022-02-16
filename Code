@@ -1,0 +1,12 @@
+v=[]
+def flat(l):
+    for i in l:
+        if type(i)==list:
+            flat(i)
+        else:
+            v.append(i)
+        
+l=[[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+flat(l)
+v
+[1, 'a', 'cat', 2, 3, 'dog', 4, 5]
